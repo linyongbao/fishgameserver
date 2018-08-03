@@ -43,15 +43,11 @@
 		scope="singleton" init-method="init" lazy-init="false">
 	</bean>
 	
-	<bean id="giftService" class="com.bbgame.server.websocket.service.GiftService"
+	<bean id="userService" class="com.bbgame.server.websocket.service.UserDataService"
 		scope="singleton" init-method="init" lazy-init="false">
-		<property name="serviceId" value="10000" />
+		<property name="serviceId" value="10001" />
 	</bean>
 		
 
-	<bean id="remoteGetService" class="com.bbgame.server.websocket.service.RemoteGetService"
-		scope="singleton" init-method="init" lazy-init="false">
-		<property name="serviceId" value="10005" />
-	</bean>
 	
 </beans>

@@ -1,3 +1,0 @@
-172.26.84.19 - - [14/Mar/2018:17:09:16 +0800] "GET /login/wxgetUser?openid=test1&access_token=test1 HTTP/1.1" 200 157 http-bio-7088-exec-1 619
-172.26.84.19 - - [14/Mar/2018:17:13:25 +0800] "GET /login/wxgetUser?openid=test1&access_token=test1 HTTP/1.1" 200 157 http-bio-7088-exec-1 640
-172.26.84.19 - - [14/Mar/2018:17:15:34 +0800] "GET /login/wxgetUser?openid=test1&access_token=test1 HTTP/1.1" 200 157 http-bio-7088-exec-1 654

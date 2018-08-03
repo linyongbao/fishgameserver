@@ -123,10 +123,5 @@
 		<property name="serviceId" value="10001" />
 	</bean>
 
-	<bean id="remoteGetService" class="com.fish.server.websocket.service.RemoteGetService"
-		scope="singleton" init-method="init" lazy-init="false">
-		<property name="serviceId" value="10002" />
-	</bean>
-	
 	
 </beans>

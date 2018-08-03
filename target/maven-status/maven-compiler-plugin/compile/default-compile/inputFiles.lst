@@ -41,7 +41,6 @@ F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\service\U
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\websocket\base\key\BaseKey.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\dao\userstatic\UserStaticDao.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\websocket\session\SessionService.java
-F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\websocket\service\RemoteGetService.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\controller\front\FrontLoginController.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\base\listener\TomcatListener.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\controller\front\FrontRegController.java
