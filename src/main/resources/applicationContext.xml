@@ -123,5 +123,10 @@
 		<property name="serviceId" value="10001" />
 	</bean>
 
+	<bean id="betDataService" class="com.fish.server.websocket.service.BetDataService"
+		scope="singleton" init-method="init" lazy-init="false">
+		<property name="serviceId" value="10000" />
+	</bean>
+	
 	
 </beans>
