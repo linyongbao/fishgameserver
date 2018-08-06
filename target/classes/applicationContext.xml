@@ -128,5 +128,9 @@
 		<property name="serviceId" value="10000" />
 	</bean>
 	
+	<bean id="taskTimeDataService" class="com.fish.server.websocket.service.TaskTimeDataService"
+		scope="singleton" init-method="init" lazy-init="false">
+		<property name="serviceId" value="10003" />
+	</bean>
 	
 </beans>

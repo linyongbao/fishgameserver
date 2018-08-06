@@ -56,40 +56,8 @@ public class QueryFinance {
 		this.keyWord = keyWord;
 	}
 
-	/**
-	 * @return the beginCreateTime
-	 */
-	public Date getBeginCreateTime() {
-		return beginCreateTime;
-	}
-
-	/**
-	 * @param beginCreateTime
-	 *            the beginCreateTime to set
-	 */
-	public void setBeginCreateTime(Date beginCreateTime) {
-		this.beginCreateTime = beginCreateTime;
-	}
-
-	/**
-	 * @return the endCreateTime
-	 */
-	public Date getEndCreateTime() {
-		return endCreateTime;
-	}
-
-	/**
-	 * @param endCreateTime
-	 *            the endCreateTime to set
-	 */
-	public void setEndCreateTime(Date endCreateTime) {
-		this.endCreateTime = endCreateTime;
-	}
 
 	private String keyWord;
 
-	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	private Date beginCreateTime;// 查询 开始注册时间
-	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	private Date endCreateTime;// 查询 结束注册时间
+
 }

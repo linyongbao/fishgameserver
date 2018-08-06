@@ -1,12 +1,10 @@
 package com.fish.server.websocket;
 
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.http.NameValuePair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,22 +17,15 @@ import com.corundumstudio.socketio.SocketIOClient;
 import com.corundumstudio.socketio.SocketIOServer;
 import com.corundumstudio.socketio.listener.ConnectListener;
 import com.corundumstudio.socketio.listener.DisconnectListener;
-import com.fish.server.base.key.ConstantKey;
-import com.fish.server.base.util.HttpClientUtil;
 import com.fish.server.base.util.JsonUtil;
 import com.fish.server.base.util.PropertitesUtil;
-import com.fish.server.redis.RedisCacheUtil;
 import com.fish.server.web.bean.user.User;
-import com.fish.server.web.service.FinanceService;
-import com.fish.server.web.service.UserLogService;
 import com.fish.server.web.service.UserService;
-import com.fish.server.web.service.UserStaticService;
 import com.fish.server.websocket.base.key.BaseKey;
 import com.fish.server.websocket.base.key.SessionKey;
 import com.fish.server.websocket.bean.DataObj;
 import com.fish.server.websocket.bean.SessionUser;
 import com.fish.server.websocket.listener.OnDataListener;
-import com.fish.server.websocket.service.UserDataService;
 import com.fish.server.websocket.session.SessionService;
 
 public class WebSocketServer implements ConnectListener, DisconnectListener {
@@ -45,22 +36,6 @@ public class WebSocketServer implements ConnectListener, DisconnectListener {
 
 	@Autowired
 	private UserService userService;
-
-	@Autowired
-	private UserLogService userLogService;
-
-
-	@Autowired
-	private UserStaticService userStaticService;
-
-	@Autowired
-	private UserDataService userDataService;
-
-	@Autowired
-	private FinanceService financeService;
-
-	@Autowired
-	private RedisCacheUtil redisCacheUtil;
 
 	private String[] checkMacs;
 

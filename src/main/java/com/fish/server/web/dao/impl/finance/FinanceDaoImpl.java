@@ -37,15 +37,7 @@ public class FinanceDaoImpl extends BaseDaoImpl<Finance> implements FinanceDao {
 			args.add("%" + queryFinance.getKeyWord() + "%");
 
 		}
-		if (queryFinance.getBeginCreateTime() != null) {
-			sql.append(" and createTime >= ?");
-			args.add(queryFinance.getBeginCreateTime());
-		}
-
-		if (queryFinance.getEndCreateTime() != null) {
-			sql.append(" and createTime <= ?");
-			args.add(queryFinance.getEndCreateTime());
-		}
+	
 
 		if (queryFinance.getUid() != 0) {
 			sql.append(" and uid = ?");

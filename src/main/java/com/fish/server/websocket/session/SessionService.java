@@ -42,7 +42,7 @@ public class SessionService {
 		return null;
 	}
 
-	public static Object[] getClientUids() {
+	public static Object[] getClientAccounts() {
 
 		return client_cache.keySet().toArray();
 

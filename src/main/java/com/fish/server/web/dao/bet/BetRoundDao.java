@@ -4,7 +4,7 @@ import com.fish.server.web.bean.bet.BetRound;
 
 public interface BetRoundDao {
 
-	public void createBetRound(BetRound obj);
+	public BetRound createBetRound(BetRound obj);
 
 	public void updateBetRound(BetRound obj);
 
