@@ -37,7 +37,6 @@ public class WebSocketServer implements ConnectListener, DisconnectListener {
 	@Autowired
 	private UserService userService;
 
-	private String[] checkMacs;
 
 	public void init() {
 
@@ -107,7 +106,7 @@ public class WebSocketServer implements ConnectListener, DisconnectListener {
 		sessionUser = SessionService.addClient(client);
 		if (sessionUser != null) {
 			
-			userService.initUser(userMap.getId());
+			userService.initUser(userMap.getAccount());
 			data = new DataObj();
 			sessionUser.setUser(userMap);
 			data.setCode(1);

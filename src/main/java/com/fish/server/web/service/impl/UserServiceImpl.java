@@ -49,18 +49,17 @@ public class UserServiceImpl implements UserService {
 
 
 	@Override
-	public void initUser(int uid) {
-		if(uid > 0)
+	public void initUser(String account) {
+		if(account != "")
 		{
 		// TODO Auto-generated method stub
-			UserStatic userStatic = userStaticDao.getUserStaticByUid(uid);
+			UserStatic userStatic = userStaticDao.getUserStaticByAccount(account);
 			if (userStatic == null) {
 				userStatic = new UserStatic();
-				userStatic.setG_coin(0);
-				userStatic.setM_coin(0);
+				userStatic.setTrxMoney(100000);
 				userStatic.setPlayTime(0);
 				userStatic.setLevel(1);
-				userStatic.setUid(uid);
+				userStatic.setAccount(account);
 				userStaticDao.saveUserStatic(userStatic);
 			}
 		}

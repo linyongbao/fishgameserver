@@ -9,6 +9,15 @@ public class UserStatic implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private int id;
+	private int trxMoney = 100000;
+
+	public int getTrxMoney() {
+		return trxMoney;
+	}
+
+	public void setTrxMoney(int trxMoney) {
+		this.trxMoney = trxMoney;
+	}
 	/**
 	 * @return the id
 	 */
@@ -21,30 +30,7 @@ public class UserStatic implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-	/**
-	 * @return the m_coin
-	 */
-	public int getM_coin() {
-		return m_coin;
-	}
-	/**
-	 * @param m_coin the m_coin to set
-	 */
-	public void setM_coin(int m_coin) {
-		this.m_coin = m_coin;
-	}
-	/**
-	 * @return the g_coin
-	 */
-	public int getG_coin() {
-		return g_coin;
-	}
-	/**
-	 * @param g_coin the g_coin to set
-	 */
-	public void setG_coin(int g_coin) {
-		this.g_coin = g_coin;
-	}
+
 	/**
 	 * @return the playTime
 	 */
@@ -57,18 +43,7 @@ public class UserStatic implements Serializable {
 	public void setPlayTime(int playTime) {
 		this.playTime = playTime;
 	}
-	/**
-	 * @return the uid
-	 */
-	public int getUid() {
-		return uid;
-	}
-	/**
-	 * @param uid the uid to set
-	 */
-	public void setUid(int uid) {
-		this.uid = uid;
-	}
+
 	/**
 	 * @return the level
 	 */
@@ -81,9 +56,16 @@ public class UserStatic implements Serializable {
 	public void setLevel(int level) {
 		this.level = level;
 	}
-	private int m_coin;
-	private int g_coin;
+	
 	private int playTime;
-	private int uid;
+	private String account;
+	public String getAccount() {
+		return account;
+	}
+
+	public void setAccount(String account) {
+		this.account = account;
+	}
+
 	private int level;
 }

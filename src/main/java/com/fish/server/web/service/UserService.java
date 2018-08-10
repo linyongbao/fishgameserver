@@ -6,7 +6,7 @@ public interface UserService {
 
 	User loginUser( String authKey);
 
-	void initUser(int uid);
+	void initUser(String account);
 
 	User getUserByAccount(String account);
 

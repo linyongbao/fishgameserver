@@ -10,6 +10,6 @@ public interface UserStaticDao {
 
 	public UserStatic saveUserStatic(UserStatic obj);
 
-	public UserStatic getUserStaticByUid(int uid);
+	public UserStatic getUserStaticByAccount(String account);
 
 }

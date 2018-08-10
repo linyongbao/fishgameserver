@@ -11,6 +11,8 @@ public class User implements Serializable {
 	private int id;
 
 	private int sex;
+	
+
 
 	/**
 	 * @return the sex

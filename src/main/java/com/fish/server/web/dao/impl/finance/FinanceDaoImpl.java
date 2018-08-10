@@ -38,10 +38,9 @@ public class FinanceDaoImpl extends BaseDaoImpl<Finance> implements FinanceDao {
 
 		}
 	
-
-		if (queryFinance.getUid() != 0) {
-			sql.append(" and uid = ?");
-			args.add(queryFinance.getUid());
+		if (queryFinance.getAccount() != null) {
+			sql.append(" and account = ?");
+			args.add(queryFinance.getAccount());
 		}
 
 		BeanPropertyRowMapper<Finance> rowMapper = new BeanPropertyRowMapper(Finance.class);
@@ -52,18 +51,17 @@ public class FinanceDaoImpl extends BaseDaoImpl<Finance> implements FinanceDao {
 	public Finance saveFinance(final Finance finance) {
 		// TODO Auto-generated method stub
 		final String addSql = "insert into " + this.tableName
-				+ "(`m_coin`,`g_coin`,`remark`,`type`,`createTime`,`uid`) values(?,?,?,?,?,?)";
+				+ "(`trxMoney`,`remark`,`type`,`createTime`,`account`) values(?,?,?,?,?)";
 
 		int id = insert(new PreparedStatementCreator() {
 			@Override
 			public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
 				PreparedStatement ps = con.prepareStatement(addSql, new String[] { "id" });
-				ps.setInt(1, finance.getM_coin());
-				ps.setInt(2, finance.getG_coin());
-				ps.setString(3, finance.getRemark());
-				ps.setInt(4, finance.getType());
-				ps.setObject(5, finance.getCreateTime());
-				ps.setInt(6, finance.getUid());
+				ps.setInt(1, finance.getTrxMoney());
+				ps.setString(2, finance.getRemark());
+				ps.setInt(3, finance.getType());
+				ps.setObject(4, finance.getCreateTime());
+				ps.setString(5, finance.getAccount());
 				return ps;
 			}
 		});

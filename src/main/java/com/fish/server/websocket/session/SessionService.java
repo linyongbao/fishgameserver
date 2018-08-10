@@ -104,4 +104,11 @@ public class SessionService {
 		return client_cache.size();
 	}
 
+	public static void sendDataToAll( DataObj data) {
+		Object[] accounts = SessionService.getClientAccounts();
+		for (int i = 0; i < accounts.length; i++) {
+			String account = (String) accounts[i];
+			sendDataToClient(account,data);
+		}
+	}
 }

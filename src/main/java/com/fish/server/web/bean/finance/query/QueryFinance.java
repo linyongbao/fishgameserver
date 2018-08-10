@@ -24,22 +24,16 @@ public class QueryFinance {
 		this.type = type;
 	}
 
-	/**
-	 * @return the uid
-	 */
-	public int getUid() {
-		return uid;
+
+	private String account;
+
+	public String getAccount() {
+		return account;
 	}
 
-	/**
-	 * @param uid
-	 *            the uid to set
-	 */
-	public void setUid(int uid) {
-		this.uid = uid;
+	public void setAccount(String account) {
+		this.account = account;
 	}
-
-	private int uid;
 
 	/**
 	 * @return the keyWord

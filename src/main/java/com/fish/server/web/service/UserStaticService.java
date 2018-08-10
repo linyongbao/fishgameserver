@@ -8,11 +8,8 @@ public interface UserStaticService {
 
 	public void updateUserStatic(UserStatic obj);
 
-	public UserStatic getUserStaticByUId(int uid);
+	public UserStatic getUserStaticByAccount(String account);
 
-	public UserStatic prizeOrReduceGCoin(int uid, int getG_coin, String desc, int type);
+	public UserStatic prizeOrReduceTrx(String account, int trx, String desc, int type);
 
-	public void ifDayFirstLoginPrizeGCoin(int uid);
-
-	public UserStatic prizeOrReduceMCoin(int uid, int getM_coin, String desc, int type);
 }

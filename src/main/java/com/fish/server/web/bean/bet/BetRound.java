@@ -57,26 +57,5 @@ public class BetRound {
 	private int betTimeTotal= 20;//20秒下注
 	private int state = 0;//-1,无状态 ,0下注阶段，1，钓鱼阶段  2，结束阶段
 	
-	public int getBetLeftWinValue() {
-		return betLeftWinValue;
-	}
-	public void setBetLeftWinValue(int betLeftWinValue) {
-		this.betLeftWinValue = betLeftWinValue;
-	}
-	public int getBetPeaceValue() {
-		return betPeaceValue;
-	}
-	public void setBetPeaceValue(int betPeaceValue) {
-		this.betPeaceValue = betPeaceValue;
-	}
-	public int getBetRigtWinValue() {
-		return betRigtWinValue;
-	}
-	public void setBetRigtWinValue(int betRigtWinValue) {
-		this.betRigtWinValue = betRigtWinValue;
-	}
-	private int betLeftWinValue = 0;
-	private int betPeaceValue = 0;
-	private int betRigtWinValue = 0;
 	
 }

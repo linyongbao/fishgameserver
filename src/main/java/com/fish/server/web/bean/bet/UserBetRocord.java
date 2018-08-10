@@ -7,7 +7,28 @@ public class UserBetRocord {
 	private int id;
 	private String account;
 	private String moneyType;//trx
-	private double betCount;//下注数量
+	private int betCount1;//左赢
+	public int getBetCount1() {
+		return betCount1;
+	}
+	public void setBetCount1(int betCount1) {
+		this.betCount1 = betCount1;
+	}
+	public int getBetCount2() {
+		return betCount2;
+	}
+	public void setBetCount2(int betCount2) {
+		this.betCount2 = betCount2;
+	}
+	public int getBetCount3() {
+		return betCount3;
+	}
+	public void setBetCount3(int betCount3) {
+		this.betCount3 = betCount3;
+	}
+
+	private int betCount2;//平
+	private int betCount3;//右赢
 	private Date createTime;
 	public int getBetRoundId() {
 		return betRoundId;
@@ -39,25 +60,13 @@ public class UserBetRocord {
 	public void setMoneyType(String moneyType) {
 		this.moneyType = moneyType;
 	}
-	public double getBetCount() {
-		return betCount;
-	}
-	public void setBetCount(double betCount) {
-		this.betCount = betCount;
-	}
-
-	public int getWinType() {
-		return winType;
-	}
-	public void setWinType(int winType) {
-		this.winType = winType;
-	}
+	
 	public int getBetResult() {
 		return betResult;
 	}
 	public void setBetResult(int betResult) {
 		this.betResult = betResult;
 	}
-	private int winType;//玩法，0左赢，1，平，2，右赢
+
 	private int betResult;//结果,0还没结果，1，中，2，不中
 }

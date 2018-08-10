@@ -7,39 +7,6 @@ public class Finance implements Serializable {
 	private static final long serialVersionUID = 1L;
 	public static final int INCOME = 1;// 收入
 	public static final int OUTCOME = 0;//消费
-	private int m_coin;
-
-	/**
-	 * @return the m_coin
-	 */
-	public int getM_coin() {
-		return m_coin;
-	}
-
-	/**
-	 * @param m_coin
-	 *            the m_coin to set
-	 */
-	public void setM_coin(int m_coin) {
-		this.m_coin = m_coin;
-	}
-
-	/**
-	 * @return the g_coin
-	 */
-	public int getG_coin() {
-		return g_coin;
-	}
-
-	/**
-	 * @param g_coin
-	 *            the g_coin to set
-	 */
-	public void setG_coin(int g_coin) {
-		this.g_coin = g_coin;
-	}
-
-
 
 	/**
 	 * @return the type
@@ -88,26 +55,31 @@ public class Finance implements Serializable {
 		this.createTime = createTime;
 	}
 
-	/**
-	 * @return the uid
-	 */
-	public int getUid() {
-		return uid;
+	
+
+	private int trxMoney;
+	public int getTrxMoney() {
+		return trxMoney;
 	}
 
-	/**
-	 * @param uid
-	 *            the uid to set
-	 */
-	public void setUid(int uid) {
-		this.uid = uid;
+	public void setTrxMoney(int trxMoney) {
+		this.trxMoney = trxMoney;
 	}
 
-	private int g_coin;
+	public String getAccount() {
+		return account;
+	}
+
+	public void setAccount(String account) {
+		this.account = account;
+	}
+
+
+
 	private int type;//0消费，1，收入
 	private String remark;
 	private Date createTime;
-	private int uid;
+	private String account;
 	private int id;
 
 	/**

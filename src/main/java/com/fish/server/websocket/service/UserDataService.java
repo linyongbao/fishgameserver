@@ -48,10 +48,9 @@ public class UserDataService extends BaseService implements IReceiveDataService 
 
 	public void noticeUserStaticUpdate(String account) {
 		// TODO Auto-generated method stub
-		User user = userService.getUserByAccount(account);
-		if(user != null)
+		if(account != null)
 		{
-			UserStatic userStatic = userStaticService.getUserStaticByUId(user.getId());
+			UserStatic userStatic = userStaticService.getUserStaticByAccount(account);
 			DataObj data = new DataObj();
 			data.setJsonObj(userStatic);
 			data.setCmd(CmdConst.UPDATE_USER_DATA_BRO);

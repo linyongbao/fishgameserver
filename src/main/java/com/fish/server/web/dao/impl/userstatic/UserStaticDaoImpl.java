@@ -31,8 +31,7 @@ public class UserStaticDaoImpl extends BaseDaoImpl<UserStatic> implements UserSt
 	public void updateUserStatic(UserStatic obj) {
 
 		Map<String, Object> set = new HashMap();
-		set.put("g_coin", obj.getG_coin());
-		set.put("m_coin", obj.getM_coin());
+		set.put("trxMoney", obj.getTrxMoney());
 		set.put("level", obj.getLevel());
 		set.put("playTime", obj.getPlayTime());
 		Map<String, Object> query = new HashMap();
@@ -44,17 +43,16 @@ public class UserStaticDaoImpl extends BaseDaoImpl<UserStatic> implements UserSt
 	public UserStatic saveUserStatic(final UserStatic obj) {
 		// TODO Auto-generated method stub
 		final String addSql = "insert into " + this.tableName
-				+ "(`uid`,`level`,`m_coin`,`g_coin`,'playTime') values(?,?,?,?,?)";
+				+ "(`account`,`level`,`trxMoney`,'playTime') values(?,?,?,?)";
 
 		int id = insert(new PreparedStatementCreator() {
 			@Override
 			public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
 				PreparedStatement ps = con.prepareStatement(addSql, new String[] { "id" });
-				ps.setInt(1, obj.getUid());
+				ps.setString(1, obj.getAccount());
 				ps.setInt(2, obj.getLevel());
-				ps.setInt(3, obj.getM_coin());
-				ps.setInt(4, obj.getG_coin());
-				ps.setInt(5, obj.getPlayTime());
+				ps.setInt(3, obj.getTrxMoney());
+				ps.setInt(4, obj.getPlayTime());
 				return ps;
 			}
 		});
@@ -63,10 +61,11 @@ public class UserStaticDaoImpl extends BaseDaoImpl<UserStatic> implements UserSt
 	}
 
 
+	
 	@Override
-	public UserStatic getUserStaticByUid(int uid) {
+	public UserStatic getUserStaticByAccount(String account) {
 		// TODO Auto-generated method stub
-		return this.getByKey("uid", uid);
+		return this.getByKey("account", account);
 	}
 
 

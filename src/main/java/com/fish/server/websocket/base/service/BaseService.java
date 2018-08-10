@@ -54,6 +54,13 @@ public class BaseService {
 	public void brocastDataToAccount(String account, DataObj data) {
 		SessionService.sendDataToClient(account, data);
 	}
+	public void brocastDataToAll( DataObj data) {
+		Object[] accounts = SessionService.getClientAccounts();
+		for (int i = 0; i < accounts.length; i++) {
+			String account = (String) accounts[i];
+			brocastDataToAccount(account,data);
+		}
+	}
 
 	public void brocastDataToClient(SocketIOClient client, DataObj data) {
 		if (client != null) {
