@@ -57,7 +57,6 @@ public class UserServiceImpl implements UserService {
 			if (userStatic == null) {
 				userStatic = new UserStatic();
 				userStatic.setTrxMoney(100000);
-				userStatic.setPlayTime(0);
 				userStatic.setLevel(1);
 				userStatic.setAccount(account);
 				userStaticDao.saveUserStatic(userStatic);

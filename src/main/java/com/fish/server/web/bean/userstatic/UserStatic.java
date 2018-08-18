@@ -32,19 +32,6 @@ public class UserStatic implements Serializable {
 	}
 
 	/**
-	 * @return the playTime
-	 */
-	public int getPlayTime() {
-		return playTime;
-	}
-	/**
-	 * @param playTime the playTime to set
-	 */
-	public void setPlayTime(int playTime) {
-		this.playTime = playTime;
-	}
-
-	/**
 	 * @return the level
 	 */
 	public int getLevel() {
@@ -57,7 +44,7 @@ public class UserStatic implements Serializable {
 		this.level = level;
 	}
 	
-	private int playTime;
+
 	private String account;
 	public String getAccount() {
 		return account;

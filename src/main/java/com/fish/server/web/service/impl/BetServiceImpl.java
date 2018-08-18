@@ -157,9 +157,16 @@ public class BetServiceImpl implements BetService {
 
 			max = fishCount2 - 1;
 			min = 0;
-			random = new Random();
-			fishCount1 = random.nextInt(max) % (max - min + 1) + min;
-
+			if(max > 0)
+			{
+				random = new Random();
+				fishCount1 = random.nextInt(max) % (max - min + 1) + min;
+			}
+			else
+			{
+				fishCount1 = 0;
+				
+			}
 		}
 
 		BetRoundResult result = betRoundResultDao

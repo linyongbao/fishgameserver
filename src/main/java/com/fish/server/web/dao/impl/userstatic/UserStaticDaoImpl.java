@@ -33,7 +33,6 @@ public class UserStaticDaoImpl extends BaseDaoImpl<UserStatic> implements UserSt
 		Map<String, Object> set = new HashMap();
 		set.put("trxMoney", obj.getTrxMoney());
 		set.put("level", obj.getLevel());
-		set.put("playTime", obj.getPlayTime());
 		Map<String, Object> query = new HashMap();
 		query.put("id", obj.getId());
 		this.updateOne(set, query);
@@ -43,7 +42,7 @@ public class UserStaticDaoImpl extends BaseDaoImpl<UserStatic> implements UserSt
 	public UserStatic saveUserStatic(final UserStatic obj) {
 		// TODO Auto-generated method stub
 		final String addSql = "insert into " + this.tableName
-				+ "(`account`,`level`,`trxMoney`,'playTime') values(?,?,?,?)";
+				+ "(`account`,`level`,`trxMoney`) values(?,?,?)";
 
 		int id = insert(new PreparedStatementCreator() {
 			@Override
@@ -52,7 +51,6 @@ public class UserStaticDaoImpl extends BaseDaoImpl<UserStatic> implements UserSt
 				ps.setString(1, obj.getAccount());
 				ps.setInt(2, obj.getLevel());
 				ps.setInt(3, obj.getTrxMoney());
-				ps.setInt(4, obj.getPlayTime());
 				return ps;
 			}
 		});

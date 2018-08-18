@@ -38,7 +38,7 @@ public class TaskTimeDataService extends BaseService implements
 		currentRoundBro(); 
 	}
 
-	private int waitTime = 0;
+
 	private void currentRoundBro() {
 		// TODO Auto-generated method stub
 		Timer playTimer = new Timer();
@@ -54,10 +54,7 @@ public class TaskTimeDataService extends BaseService implements
 		DataObj data = null;
 		boolean endFlag = false;
 		boolean startFlag = false;
-		waitTime--;
-		if (waitTime > 0)
-			return;
-	
+
 		BetRound currentBetRound = betService.getCurrentBetRound();
 		if (currentBetRound == null) {
 			currentBetRound = betService.createBetRound();
@@ -81,7 +78,6 @@ public class TaskTimeDataService extends BaseService implements
 				{
 					endFlag = true;
 					currentBetRound.setState(2);
-					waitTime  = 10;
 					//计算中
 					cauUserBetResult(currentBetRound.getId());
 				}
