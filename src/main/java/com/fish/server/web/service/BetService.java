@@ -27,6 +27,9 @@ public interface BetService {
 
 	void cauUserBetResult(int betRoundId);
 	
+	BetRoundResult getBetRounResultByRoundId(int betRoundId);
+	
+	
 	
 	
 	

@@ -95,11 +95,18 @@ public class TaskTimeDataService extends BaseService implements
 		if (currentBetRound != null) {
 
 		
+			Map betRoundDataMap = new HashMap();
+			BetRoundResult  roundResult = betService.getBetRounResultByRoundId(currentBetRound.getId());
+			betRoundDataMap.put("currentBetRound", currentBetRound);
+			if(roundResult != null)
+				betRoundDataMap.put("fishGetProJsonStr", roundResult.getFishGetProJsonStr());
+			else
+				betRoundDataMap.put("fishGetProJsonStr", null);
 			data = new DataObj();
-			data.setJsonObj(currentBetRound);
+			data.setJsonObj(betRoundDataMap);
 			data.setCode(0);
 			data.setServiceid(CmdConst.BET_SERVICE_ID);
-			data.setCmd(CmdConst.BET_ROUND_BRO);
+			data.setCmd(CmdConst.BET_ROUND_INFO_BRO);
 			SessionService.sendDataToAll(data);
 			
 			if(endFlag)
@@ -108,7 +115,7 @@ public class TaskTimeDataService extends BaseService implements
 				data = new DataObj();
 				data.setJsonObj(null);
 				data.setCode(0);
-				data.setServiceid(CmdConst.BET_SERVICE_ID);
+				data.setServiceid(CmdConst.PLAY_SERVICE_ID);
 				data.setCmd(CmdConst.PLAY_END_BRO);
 				SessionService.sendDataToAll( data);
 			}
@@ -119,7 +126,7 @@ public class TaskTimeDataService extends BaseService implements
 				data = new DataObj();
 				data.setJsonObj(null);
 				data.setCode(0);
-				data.setServiceid(CmdConst.BET_SERVICE_ID);
+				data.setServiceid(CmdConst.PLAY_SERVICE_ID);
 				data.setCmd(CmdConst.PLAY_START_BRO);
 				SessionService.sendDataToAll(data);
 			}

@@ -10,6 +10,7 @@ import com.corundumstudio.socketio.AckRequest;
 import com.corundumstudio.socketio.SocketIOClient;
 import com.fish.server.redis.RedisCacheUtil;
 import com.fish.server.web.bean.bet.BetRound;
+import com.fish.server.web.bean.bet.BetRoundResult;
 import com.fish.server.web.bean.bet.UserBetRocord;
 import com.fish.server.web.bean.user.User;
 import com.fish.server.web.bean.userstatic.UserStatic;
@@ -47,7 +48,7 @@ public class BetDataService extends BaseService implements IReceiveDataService {
 		Map<String, Object> resMap = null;
 		DataObj returnData = null;
 
-		if (data.getCmd() == CmdConst.MY_BET_REQ)//
+		if (data.getCmd() == CmdConst.BET_ACTION_REQ)//
 		{
 			BetRound currentBetRound = betService.getCurrentBetRound();
 			if (currentBetRound != null && currentBetRound.getState() != 0) {
@@ -55,7 +56,7 @@ public class BetDataService extends BaseService implements IReceiveDataService {
 				returnData = new DataObj();
 				returnData.setJsonObj(null);
 				returnData.setCode(1);
-				returnData.setCmd(CmdConst.MY_BET_RSP);
+				returnData.setCmd(CmdConst.BET_ACTION_RSP);
 				returnData.setServiceId(CmdConst.BET_SERVICE_ID);
 				brocastDataToAccount(account, returnData);
 			} else if (currentBetRound != null) {
@@ -103,7 +104,7 @@ public class BetDataService extends BaseService implements IReceiveDataService {
 					returnData = new DataObj();
 					returnData.setJsonObj(myBetStaticObj);
 					returnData.setCode(0);
-					returnData.setCmd(CmdConst.MY_BET_RSP);
+					returnData.setCmd(CmdConst.BET_ACTION_RSP);
 					returnData.setServiceId(CmdConst.BET_SERVICE_ID);
 					brocastDataToAccount(account, returnData);
 
@@ -131,12 +132,18 @@ public class BetDataService extends BaseService implements IReceiveDataService {
 							"bet_" + currentBetRound.getId(), betStaticObj);
 
 					HashMap betData = new HashMap();
-					betData.put("betData", map);
-					betData.put(betStatic, betStatic);
+					betData.put("totalBetCount1", betStatic.getBetCount1());
+					betData.put("totalBetCount2", betStatic.getBetCount2());
+					betData.put("totalBetCount3", betStatic.getBetCount3());
+					
+					betData.put("betCount1", betCount1);
+					betData.put("betCount2", betCount2);
+					betData.put("betCount3", betCount3);
+					
 					returnData = new DataObj();
 					returnData.setJsonObj(betData);
 					returnData.setCode(0);
-					returnData.setCmd(CmdConst.BET_BRO);
+					returnData.setCmd(CmdConst.BET_ACTION_BRO);
 					returnData.setServiceId(CmdConst.BET_SERVICE_ID);
 					brocastDataToAll(returnData);
 
@@ -144,7 +151,7 @@ public class BetDataService extends BaseService implements IReceiveDataService {
 					returnData = new DataObj();
 					returnData.setJsonObj(null);
 					returnData.setCode(3);
-					returnData.setCmd(CmdConst.MY_BET_RSP);
+					returnData.setCmd(CmdConst.BET_ACTION_RSP);
 					returnData.setServiceId(CmdConst.BET_SERVICE_ID);
 					brocastDataToAccount(account, returnData);
 				}
@@ -152,7 +159,7 @@ public class BetDataService extends BaseService implements IReceiveDataService {
 				returnData = new DataObj();
 				returnData.setJsonObj(null);
 				returnData.setCode(2);
-				returnData.setCmd(CmdConst.MY_BET_RSP);
+				returnData.setCmd(CmdConst.BET_ACTION_RSP);
 				returnData.setServiceId(CmdConst.BET_SERVICE_ID);
 				brocastDataToAccount(account, returnData);
 
@@ -160,21 +167,27 @@ public class BetDataService extends BaseService implements IReceiveDataService {
 
 		}
 
-		else if (data.getCmd() == CmdConst.BET_ROUND_REQ)//
+		else if (data.getCmd() == CmdConst.BET_ROUND_INFO_REQ)//
 		{
 			BetRound currentBetRound = betService.getCurrentBetRound();
 			Object betStaticObj = redisCacheUtil.getCacheObject("bet_"
 					+ currentBetRound.getId());
 			Object myBetStaticObj = redisCacheUtil.getCacheObject("mybet_"
 					+ account + "_" + currentBetRound.getId());
+			
+			BetRoundResult  roundResult = betService.getBetRounResultByRoundId(currentBetRound.getId());
 			Map betRoundDataMap = new HashMap();
 			betRoundDataMap.put("currentBetRound", currentBetRound);
+			if(roundResult != null)
+				betRoundDataMap.put("fishGetProJsonStr", roundResult.getFishGetProJsonStr());
+			else
+				betRoundDataMap.put("fishGetProJsonStr", null);
 			betRoundDataMap.put("betStatic", betStaticObj);
 			betRoundDataMap.put("myBetStatic", myBetStaticObj);
 			returnData = new DataObj();
 			returnData.setJsonObj(betRoundDataMap);
 			returnData.setCode(0);
-			returnData.setCmd(CmdConst.BET_ROUND_RSP);
+			returnData.setCmd(CmdConst.BET_ROUND_INFO_RSP);
 			returnData.setServiceId(CmdConst.BET_SERVICE_ID);
 			brocastDataToAccount(account, returnData);
 		}

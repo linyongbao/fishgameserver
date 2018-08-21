@@ -244,4 +244,10 @@ public class BetServiceImpl implements BetService {
 		
 	}
 
+	@Override
+	public BetRoundResult getBetRounResultByRoundId(int betRoundId) {
+		// TODO Auto-generated method stub
+		return this.betRoundResultDao.getBetResultByRoundId(betRoundId);
+	}
+
 }

@@ -53,7 +53,7 @@ public class UserDataService extends BaseService implements IReceiveDataService 
 			UserStatic userStatic = userStaticService.getUserStaticByAccount(account);
 			DataObj data = new DataObj();
 			data.setJsonObj(userStatic);
-			data.setCmd(CmdConst.UPDATE_USER_DATA_BRO);
+			data.setCmd(CmdConst.UPDATE_USER_INFO_BRO);
 			data.setServiceId(CmdConst.USER_SERVICE_ID);
 			brocastDataToAccount(account, data);
 		}

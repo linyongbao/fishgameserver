@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50623
 File Encoding         : 65001
 
-Date: 2018-08-18 17:59:29
+Date: 2018-08-21 19:16:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,7 +27,7 @@ CREATE TABLE `fish_betround` (
   `betTimeTotal` int(11) DEFAULT NULL COMMENT '下注总时间',
   `gameTimeTotal` int(11) DEFAULT NULL COMMENT '钓鱼总时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=205 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=207 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of fish_betround
@@ -104,7 +104,9 @@ INSERT INTO `fish_betround` VALUES ('200', '0', '2018-08-18 17:55:46', '0', '2',
 INSERT INTO `fish_betround` VALUES ('201', '0', '2018-08-18 17:56:37', '0', '2', '30', '20');
 INSERT INTO `fish_betround` VALUES ('202', '0', '2018-08-18 17:57:28', '0', '2', '30', '20');
 INSERT INTO `fish_betround` VALUES ('203', '0', '2018-08-18 17:58:19', '0', '2', '30', '20');
-INSERT INTO `fish_betround` VALUES ('204', '11', '2018-08-18 17:59:10', '20', '0', '30', '20');
+INSERT INTO `fish_betround` VALUES ('204', '0', '2018-08-18 17:59:10', '0', '2', '30', '20');
+INSERT INTO `fish_betround` VALUES ('205', '0', '2018-08-18 18:00:01', '0', '2', '30', '20');
+INSERT INTO `fish_betround` VALUES ('206', '0', '2018-08-21 19:14:20', '20', '1', '30', '20');
 
 -- ----------------------------
 -- Table structure for `fish_betround_result`
@@ -115,76 +117,80 @@ CREATE TABLE `fish_betround_result` (
   `fishCountLeft` int(11) DEFAULT '0' COMMENT '左边钓鱼数',
   `fishCountRight` int(11) DEFAULT NULL COMMENT '右边钓鱼数',
   `betRoundId` int(11) NOT NULL COMMENT '轮次ID',
+  `fishGetProJsonStr` varchar(255) DEFAULT NULL COMMENT '钓鱼过程',
   PRIMARY KEY (`betRoundId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of fish_betround_result
 -- ----------------------------
-INSERT INTO `fish_betround_result` VALUES ('2018-08-10 17:33:39', '4', '1', '140');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:00:56', '0', '2', '141');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:01:48', '8', '11', '142');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:02:39', '0', '5', '143');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:03:30', '3', '1', '144');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:05:09', '3', '6', '145');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:06:00', '0', '2', '146');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:06:51', '5', '5', '147');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:07:42', '1', '5', '148');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:08:33', '8', '11', '149');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:09:24', '2', '11', '150');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:10:15', '6', '9', '151');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:14:01', '8', '2', '152');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:14:51', '9', '11', '153');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:17:10', '8', '10', '154');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:18:01', '0', '3', '155');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:18:52', '2', '4', '156');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:19:43', '1', '1', '157');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:20:34', '5', '5', '158');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:21:25', '8', '8', '159');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:22:16', '4', '4', '160');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:23:07', '0', '2', '161');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:23:58', '7', '4', '162');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:24:49', '0', '9', '163');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:25:40', '9', '2', '164');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:26:31', '1', '0', '165');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:27:22', '2', '0', '166');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:28:13', '7', '0', '167');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:29:04', '3', '1', '168');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:29:55', '7', '4', '169');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:30:46', '1', '1', '170');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:31:37', '10', '3', '171');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:32:28', '2', '4', '172');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:33:19', '1', '6', '173');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:34:10', '3', '0', '174');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:35:01', '3', '0', '175');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:35:52', '5', '2', '176');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:36:43', '6', '0', '177');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:37:34', '5', '1', '178');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:38:25', '9', '9', '179');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:39:16', '1', '0', '180');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:40:07', '7', '7', '181');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:40:58', '10', '8', '182');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:41:49', '0', '4', '183');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:42:40', '1', '4', '184');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:43:31', '10', '0', '185');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:44:22', '0', '5', '186');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:45:13', '10', '7', '187');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:46:04', '0', '8', '188');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:46:55', '6', '0', '189');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:47:46', '8', '3', '190');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:48:37', '0', '1', '191');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:49:28', '11', '0', '192');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:50:19', '2', '4', '193');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:51:10', '0', '5', '194');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:52:01', '11', '8', '195');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:52:52', '5', '2', '196');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:53:43', '9', '7', '197');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:54:34', '3', '6', '198');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:55:25', '8', '6', '199');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:56:16', '5', '10', '200');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:57:07', '7', '5', '201');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:57:58', '8', '8', '202');
-INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:58:49', '0', '6', '203');
+INSERT INTO `fish_betround_result` VALUES ('2018-08-10 17:33:39', '4', '1', '140', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:00:56', '0', '2', '141', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:01:48', '8', '11', '142', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:02:39', '0', '5', '143', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:03:30', '3', '1', '144', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:05:09', '3', '6', '145', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:06:00', '0', '2', '146', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:06:51', '5', '5', '147', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:07:42', '1', '5', '148', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:08:33', '8', '11', '149', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:09:24', '2', '11', '150', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:10:15', '6', '9', '151', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:14:01', '8', '2', '152', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:14:51', '9', '11', '153', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:17:10', '8', '10', '154', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:18:01', '0', '3', '155', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:18:52', '2', '4', '156', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:19:43', '1', '1', '157', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:20:34', '5', '5', '158', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:21:25', '8', '8', '159', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:22:16', '4', '4', '160', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:23:07', '0', '2', '161', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:23:58', '7', '4', '162', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:24:49', '0', '9', '163', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:25:40', '9', '2', '164', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:26:31', '1', '0', '165', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:27:22', '2', '0', '166', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:28:13', '7', '0', '167', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:29:04', '3', '1', '168', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:29:55', '7', '4', '169', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:30:46', '1', '1', '170', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:31:37', '10', '3', '171', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:32:28', '2', '4', '172', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:33:19', '1', '6', '173', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:34:10', '3', '0', '174', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:35:01', '3', '0', '175', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:35:52', '5', '2', '176', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:36:43', '6', '0', '177', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:37:34', '5', '1', '178', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:38:25', '9', '9', '179', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:39:16', '1', '0', '180', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:40:07', '7', '7', '181', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:40:58', '10', '8', '182', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:41:49', '0', '4', '183', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:42:40', '1', '4', '184', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:43:31', '10', '0', '185', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:44:22', '0', '5', '186', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:45:13', '10', '7', '187', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:46:04', '0', '8', '188', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:46:55', '6', '0', '189', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:47:46', '8', '3', '190', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:48:37', '0', '1', '191', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:49:28', '11', '0', '192', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:50:19', '2', '4', '193', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:51:10', '0', '5', '194', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:52:01', '11', '8', '195', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:52:52', '5', '2', '196', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:53:43', '9', '7', '197', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:54:34', '3', '6', '198', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:55:25', '8', '6', '199', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:56:16', '5', '10', '200', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:57:07', '7', '5', '201', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:57:58', '8', '8', '202', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:58:49', '0', '6', '203', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 17:59:40', '0', '4', '204', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-18 18:00:31', '1', '0', '205', null);
+INSERT INTO `fish_betround_result` VALUES ('2018-08-21 19:15:42', '3', '1', '206', null);
 
 -- ----------------------------
 -- Table structure for `fish_finance`
