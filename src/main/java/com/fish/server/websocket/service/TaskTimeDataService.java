@@ -19,11 +19,11 @@ import com.fish.server.web.bean.userstatic.UserStatic;
 import com.fish.server.web.service.BetService;
 import com.fish.server.websocket.base.inter.IReceiveDataService;
 import com.fish.server.websocket.base.key.CmdConst;
-import com.fish.server.websocket.base.service.BaseService;
+import com.fish.server.websocket.base.service.BaseDataService;
 import com.fish.server.websocket.bean.DataObj;
 import com.fish.server.websocket.session.SessionService;
 
-public class TaskTimeDataService extends BaseService implements
+public class TaskTimeDataService extends BaseDataService implements
 		IReceiveDataService {
 
 	@Autowired
@@ -66,8 +66,8 @@ public class TaskTimeDataService extends BaseService implements
 				{
 					startFlag = true;
 					currentBetRound.setState(1);
-					//计算
-					betService.cauBetRoundResult(currentBetRound.getId());
+					//计算系统情况
+					betService.createBetRoundResult(currentBetRound.getId());
 				}
 				
 
@@ -78,8 +78,13 @@ public class TaskTimeDataService extends BaseService implements
 				{
 					endFlag = true;
 					currentBetRound.setState(2);
-					//计算中
-					cauUserBetResult(currentBetRound.getId());
+					//计算用户中了没
+					try {
+						cauUserBetResult(currentBetRound.getId());
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
 			
 			}
@@ -137,9 +142,9 @@ public class TaskTimeDataService extends BaseService implements
 		
 	}
 	
-	private void cauUserBetResult(int betRoundId){
+	private void cauUserBetResult(int betRoundId) throws Exception{
 		
-		betService.cauUserBetResult(betRoundId);
+		betService.createUserBetResult(betRoundId);
 		
 	}
 	@Override

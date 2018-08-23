@@ -1,6 +1,143 @@
-2018-08-21 19:14:11.569 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
-2018-08-21 19:14:13.286 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
-2018-08-21 19:14:13.287 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
-2018-08-21 19:15:09.929 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
-2018-08-21 19:15:11.361 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
-2018-08-21 19:15:11.361 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 10:52:22.877 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 10:52:24.193 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 10:52:24.193 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 11:12:03.182 INFO  c.f.server.websocket.WebSocketServer - 客户端进入:1534993923182
+2018-08-23 11:12:03.183 INFO  c.f.server.websocket.WebSocketServer - 客户端所在ip和端口:/172.26.84.19:5623
+2018-08-23 11:12:03.183 INFO  c.f.server.websocket.WebSocketServer - 客户端所在域名:172.26.84.19:7099
+2018-08-23 11:12:03.205 INFO  c.f.server.websocket.WebSocketServer - 系统目前人数为:1
+2018-08-23 11:16:22.721 INFO  c.f.server.websocket.WebSocketServer - 客户端进入:1534994182721
+2018-08-23 11:16:22.721 INFO  c.f.server.websocket.WebSocketServer - 客户端所在ip和端口:/172.26.84.19:5705
+2018-08-23 11:16:22.721 INFO  c.f.server.websocket.WebSocketServer - 客户端所在域名:172.26.84.19:7099
+2018-08-23 11:16:22.735 INFO  c.f.server.websocket.WebSocketServer - 系统目前人数为:2
+2018-08-23 11:18:35.651 INFO  c.f.server.websocket.WebSocketServer - 客户端进入:1534994315651
+2018-08-23 11:18:35.651 INFO  c.f.server.websocket.WebSocketServer - 客户端所在ip和端口:/172.26.84.19:5758
+2018-08-23 11:18:35.651 INFO  c.f.server.websocket.WebSocketServer - 客户端所在域名:172.26.84.19:7099
+2018-08-23 11:18:35.660 INFO  c.f.server.websocket.WebSocketServer - 系统目前人数为:3
+2018-08-23 12:20:54.520 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 12:20:56.018 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 12:20:56.018 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 12:25:37.837 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 12:25:39.445 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 12:25:39.445 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 12:26:37.860 INFO  c.f.server.websocket.WebSocketServer - 客户端进入:1534998397860
+2018-08-23 12:26:37.861 INFO  c.f.server.websocket.WebSocketServer - 客户端所在ip和端口:/172.26.84.19:21251
+2018-08-23 12:26:37.861 INFO  c.f.server.websocket.WebSocketServer - 客户端所在域名:172.26.84.19:7099
+2018-08-23 12:26:37.894 INFO  c.f.server.websocket.WebSocketServer - 系统目前人数为:1
+2018-08-23 12:29:22.538 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 12:29:24.030 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 12:29:24.030 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 12:32:27.313 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 12:32:28.766 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 12:32:28.767 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 12:39:39.452 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 12:39:40.914 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 12:39:40.914 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 12:41:29.472 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 12:41:30.991 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 12:41:30.991 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 13:06:58.045 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 13:06:59.574 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 13:06:59.574 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 13:34:59.885 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 13:35:01.335 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 13:35:01.335 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 13:36:18.355 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 13:36:19.893 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 13:36:19.893 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 13:36:47.905 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 13:36:49.361 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 13:36:49.361 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 13:40:45.021 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 13:40:46.510 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 13:40:46.510 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 13:51:47.016 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 13:51:48.427 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 13:51:48.427 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 13:59:25.821 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 13:59:27.314 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 13:59:27.314 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 13:59:50.695 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 13:59:52.189 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 13:59:52.189 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:00:33.265 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:00:34.690 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:00:34.691 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:07:21.125 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:07:22.517 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:07:22.517 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:07:58.445 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:07:59.879 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:07:59.879 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:08:40.894 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:08:42.331 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:08:42.331 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:09:23.259 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:09:24.715 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:09:24.715 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:10:17.202 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:10:18.808 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:10:18.808 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:34:30.868 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:34:32.353 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:34:32.353 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:36:12.936 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:36:14.434 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:36:14.434 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:36:52.747 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:36:54.126 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:36:54.126 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:38:56.736 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:38:58.236 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:38:58.236 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:42:35.937 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:42:37.332 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:42:37.332 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:44:36.844 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:44:38.348 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:44:38.348 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:45:37.942 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:45:39.443 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:45:39.444 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:48:39.714 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:48:41.123 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:48:41.123 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:50:17.621 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:50:19.112 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:50:19.112 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:52:16.391 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:52:17.885 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:52:17.885 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 14:53:52.498 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 14:53:54.066 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 14:53:54.066 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 15:08:27.466 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 15:08:28.895 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 15:08:28.895 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 15:17:06.256 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 15:17:07.745 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 15:17:07.745 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 15:20:28.889 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 15:20:30.380 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 15:20:30.380 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 15:53:57.683 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 15:53:59.166 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 15:53:59.166 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 15:55:17.661 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 15:55:19.185 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 15:55:19.185 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 15:57:17.725 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 15:57:19.294 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 15:57:19.294 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 15:59:12.201 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 15:59:13.633 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 15:59:13.633 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 15:59:57.885 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 15:59:59.386 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 15:59:59.386 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 16:45:36.566 INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2018-08-23 16:45:38.070 INFO  c.f.server.websocket.WebSocketServer - 启动msgserver成功
+2018-08-23 16:45:38.070 INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 7099
+2018-08-23 16:45:59.111 INFO  c.f.server.websocket.WebSocketServer - 客户端进入:1535013959111
+2018-08-23 16:45:59.112 INFO  c.f.server.websocket.WebSocketServer - 客户端所在ip和端口:/172.26.84.19:39309
+2018-08-23 16:45:59.112 INFO  c.f.server.websocket.WebSocketServer - 客户端所在域名:172.26.84.19:7099
+2018-08-23 16:45:59.158 INFO  c.f.server.websocket.WebSocketServer - 系统目前人数为:1

@@ -4,8 +4,10 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.fish.server.redis.RedisCacheUtil;
+import com.fish.server.web.base.service.BaseService;
 import com.fish.server.web.bean.user.User;
 import com.fish.server.web.bean.userlog.UserLoginLog;
 import com.fish.server.web.bean.userstatic.UserStatic;
@@ -14,8 +16,9 @@ import com.fish.server.web.dao.userstatic.UserStaticDao;
 import com.fish.server.web.service.UserLogService;
 import com.fish.server.web.service.UserService;
 
+@Transactional
 @Service("userService")
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl  extends BaseService implements UserService {
 
 	@Autowired
 	private RedisCacheUtil redisCacheUtil;

@@ -18,14 +18,14 @@ public interface BetService {
 
 	int saveUserBetRecord(UserBetRocord obj);
 	
-	BetRoundResult cauBetRoundResult(int betRoundId);
+	BetRoundResult createBetRoundResult(int betRoundId);
 	BetRoundResult getBetRoundResultById(int betRoundId);
 	List<String> getBetUsersByRoundId(int betRoundId);
 
 	//查询下注的数量,betCount1,左赢，betCount2平，betCount3右赢
 	int getBetCountByAccount(String betType, String account,int betRoundId);
 
-	void cauUserBetResult(int betRoundId);
+	void createUserBetResult(int betRoundId) throws Exception ;
 	
 	BetRoundResult getBetRounResultByRoundId(int betRoundId);
 	

@@ -75,4 +75,25 @@ public class FinanceDaoImpl extends BaseDaoImpl<Finance> implements FinanceDao {
 		return this.getByKey("id", id);
 	}
 
+	@Override
+	public void saveFinances(List<Finance> objs) {
+		// TODO Auto-generated method stub
+		
+		List<Object[]> batch = new ArrayList<Object[]>();
+		for (Finance finance : objs) {
+			Object[] values = new Object[] {
+					finance.getTrxMoney(),
+					finance.getRemark(),
+					finance.getType(),
+					finance.getCreateTime(),
+					finance.getAccount()};
+			batch.add(values);
+		}
+		int[] updateCounts = jdbcTemplate.batchUpdate(
+				 "insert into " + this.tableName
+					+ "(`trxMoney`,`remark`,`type`,`createTime`,`account`) values(?,?,?,?,?)",
+				batch);
+	
+	}
+
 }

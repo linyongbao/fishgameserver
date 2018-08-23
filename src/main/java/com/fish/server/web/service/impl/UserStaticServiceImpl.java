@@ -1,21 +1,23 @@
 package com.fish.server.web.service.impl;
 
-import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.fish.server.base.util.DateUtil;
 import com.fish.server.redis.RedisCacheUtil;
-import com.fish.server.web.bean.finance.Finance;
+import com.fish.server.web.base.service.BaseService;
 import com.fish.server.web.bean.userstatic.UserStatic;
 import com.fish.server.web.dao.userstatic.UserStaticDao;
 import com.fish.server.web.service.FinanceService;
 import com.fish.server.web.service.UserLogService;
 import com.fish.server.web.service.UserStaticService;
+import com.fish.server.web.vo.PrizeVO;
 
+@Transactional
 @Service("userStaticService")
-public class UserStaticServiceImpl implements UserStaticService {
+public class UserStaticServiceImpl  extends BaseService implements UserStaticService {
 
 	@Autowired
 	private UserStaticDao userStaticDao;
@@ -49,22 +51,10 @@ public class UserStaticServiceImpl implements UserStaticService {
 	}
 
 	@Override
-	public UserStatic prizeOrReduceTrx(String account, int trx, String desc, int type) {
+	public void updateTrxs(List<PrizeVO> prizes) {
 		// TODO Auto-generated method stub
-		UserStatic userStatic = getUserStaticByAccount(account);
-		userStatic.setTrxMoney(userStatic.getTrxMoney() + (int) trx);
-		updateUserStatic(userStatic);
-
-		// 流水记录
-		Finance fiance = new Finance();
-		fiance.setCreateTime(new Date());
-		fiance.setAccount(account);
-		fiance.setTrxMoney((int) trx);
-		fiance.setType(type);
-		fiance.setRemark(desc);
-		financeService.addFinance(fiance);
-		
-		return userStatic;
+	
+		this.userStaticDao.updateStatics(prizes);
 	}
 	
 

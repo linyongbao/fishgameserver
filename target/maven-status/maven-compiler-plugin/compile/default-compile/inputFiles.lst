@@ -35,7 +35,9 @@ F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\dao\bet\B
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\base\util\SignUtil.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\base\util\ValidateUtil.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\dao\bet\UserBetRecordDao.java
+F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\vo\NumItem.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\dao\impl\bet\UserBetRecordDaoImpl.java
+F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\websocket\base\service\BaseDataService.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\base\util\PwdEncoder.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\websocket\event\CommonEvent.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\dao\user\UserDao.java
@@ -54,6 +56,7 @@ F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\redis\RedisKe
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\websocket\service\BetDataService.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\controller\front\FrontLoginController.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\base\listener\TomcatListener.java
+F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\base\service\BaseService.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\controller\front\FrontRegController.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\file\CustomMultipartResolver.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\service\impl\UserServiceImpl.java
@@ -66,6 +69,7 @@ F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\util\Curr
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\base\util\MyPropertites.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\service\impl\FinanceServiceImpl.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\controller\captcha\CaptchaController.java
+F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\vo\PrizeVO.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\bean\finance\Finance.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\bean\userlog\UserLoginLog.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\service\impl\BetServiceImpl.java
@@ -75,11 +79,9 @@ F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\base\util\Web
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\base\util\NumberUtil.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\dao\impl\finance\FinanceDaoImpl.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\websocket\service\UserDataService.java
-F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\bean\bet\NumItem.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\controller\base\BaseController.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\base\dao\BaseDaoImpl.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\bean\bet\BetRoundResult.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\bean\bet\UserBetRocord.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\dao\impl\user\UserDaoImpl.java
-F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\websocket\base\service\BaseService.java
 F:\bu\newyydui\server\fishgameserver\src\main\java\com\fish\server\web\service\UserLogService.java

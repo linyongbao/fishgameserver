@@ -3,15 +3,19 @@ package com.fish.server.web.dao.impl.userstatic;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.stereotype.Repository;
 
 import com.fish.server.web.base.dao.BaseDaoImpl;
+import com.fish.server.web.bean.finance.Finance;
 import com.fish.server.web.bean.userstatic.UserStatic;
 import com.fish.server.web.dao.userstatic.UserStaticDao;
+import com.fish.server.web.vo.PrizeVO;
 
 @Repository("userStaticDao")
 public class UserStaticDaoImpl extends BaseDaoImpl<UserStatic> implements UserStaticDao {
@@ -66,6 +70,21 @@ public class UserStaticDaoImpl extends BaseDaoImpl<UserStatic> implements UserSt
 		return this.getByKey("account", account);
 	}
 
+	@Override
+	public void updateStatics(List<PrizeVO> prizes) {
+		// TODO Auto-generated method stub
+		
+		List<Object[]> batch = new ArrayList<Object[]>();
+		for (PrizeVO prizeVO : prizes) {
+			Object[] values = new Object[] {
+					prizeVO.getTrx()
+					,prizeVO.getAccount()};
+			batch.add(values);
+		}
+		int[] updateCounts = jdbcTemplate.batchUpdate(
+				"update " + this.tableName + " set trxMoney=trxMoney + ?   where account = ?",
+				batch);
+	}
 
 
 }

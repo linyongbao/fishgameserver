@@ -1,5 +1,7 @@
 package com.fish.server.web.service;
 
+import java.util.List;
+
 import com.fish.server.web.bean.finance.Finance;
 import com.fish.server.web.bean.finance.query.QueryFinance;
 import com.fish.server.web.util.CurrentPage;
@@ -12,5 +14,7 @@ public interface FinanceService {
 	CurrentPage<Finance> queryFinancePage(QueryFinance query, Page page);
 
 	public Finance getFinanceById(int id);
+
+	public void addFinances(List<Finance> objs);
 
 }

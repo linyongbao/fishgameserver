@@ -85,11 +85,11 @@ public class UserBetRecordDaoImpl extends BaseDaoImpl<UserBetRocord> implements 
 	@Override
 	public int getBetCountByAccount(String betType, String account,
 			int betRoundId) {
-			String sql="select sum(?) from " + this.tableName + " where betRoundId= ? and account=?";
+			String sql="select sum("+betType+") from " + this.tableName + " where betRoundId= ? and account=?";
 		
 		int sum = 0;
 		try{
-			Object[] args = new Object[] {betType,betRoundId,account};
+			Object[] args = new Object[] {betRoundId,account};
 			Integer o  = jdbcTemplate.queryForObject(sql,args,Integer.class); 
 			if(o != null)
 				sum = o.intValue();

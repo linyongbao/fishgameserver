@@ -13,14 +13,14 @@ import com.fish.server.web.service.UserService;
 import com.fish.server.web.service.UserStaticService;
 import com.fish.server.websocket.base.inter.IReceiveDataService;
 import com.fish.server.websocket.base.key.CmdConst;
-import com.fish.server.websocket.base.service.BaseService;
+import com.fish.server.websocket.base.service.BaseDataService;
 import com.fish.server.websocket.bean.DataObj;
 import com.fish.server.websocket.session.SessionService;
 
 /*
  * 对女孩子加护
  */
-public class UserDataService extends BaseService implements IReceiveDataService {
+public class UserDataService extends BaseDataService implements IReceiveDataService {
 
 	@Autowired
 	private UserService userService;

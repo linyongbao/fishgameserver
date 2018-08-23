@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-import com.fish.server.web.bean.bet.NumItem;
+import com.fish.server.web.vo.NumItem;
 
 public class NumberUtil {
 

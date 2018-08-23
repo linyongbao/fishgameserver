@@ -25,7 +25,7 @@ public class BetRoundResultDaoImpl extends BaseDaoImpl<BetRoundResult> implement
 	@Override
 	public BetRoundResult createBetRoundResult(final BetRoundResult obj) {
 		final String addSql = "insert into " + this.tableName
-				+ "(`createTime`,`fishCountLeft`,`fishCountRight`,`betRoundId`) values(?,?,?,?)";
+				+ "(`createTime`,`fishCountLeft`,`fishCountRight`,`betRoundId`,`fishGetProJsonStr`) values(?,?,?,?,?)";
 
 		insert(addSql,new PreparedStatementSetter() {
 	    public void setValues(PreparedStatement ps) throws SQLException {
@@ -33,6 +33,7 @@ public class BetRoundResultDaoImpl extends BaseDaoImpl<BetRoundResult> implement
 			ps.setInt(2, obj.getFishCountLeft());
 			ps.setInt(3, obj.getFishCountRight());
 			ps.setInt(4, obj.getBetRoundId());
+			ps.setString(5, obj.getFishGetProJsonStr());
 		  }});
 		return obj;
 	}
